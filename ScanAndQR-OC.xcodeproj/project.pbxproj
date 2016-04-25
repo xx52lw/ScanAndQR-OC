@@ -1,0 +1,471 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		D040B0311CCE6A8C0052E357 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D040B0301CCE6A8C0052E357 /* main.m */; };
+		D040B0341CCE6A8C0052E357 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D040B0331CCE6A8C0052E357 /* AppDelegate.m */; };
+		D040B03A1CCE6A8C0052E357 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D040B0381CCE6A8C0052E357 /* Main.storyboard */; };
+		D040B03C1CCE6A8C0052E357 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D040B03B1CCE6A8C0052E357 /* Assets.xcassets */; };
+		D040B03F1CCE6A8C0052E357 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D040B03D1CCE6A8C0052E357 /* LaunchScreen.storyboard */; };
+		D040B06C1CCE6AE30052E357 /* CodeScan.bundle in Resources */ = {isa = PBXBuildFile; fileRef = D040B0471CCE6AE30052E357 /* CodeScan.bundle */; };
+		D040B06D1CCE6AE30052E357 /* LWScanQRViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D040B04A1CCE6AE30052E357 /* LWScanQRViewController.m */; };
+		D040B06F1CCE6AE30052E357 /* LWScanQRModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D040B04E1CCE6AE30052E357 /* LWScanQRModel.m */; };
+		D040B0701CCE6AE30052E357 /* scanQRList.plist in Resources */ = {isa = PBXBuildFile; fileRef = D040B0501CCE6AE30052E357 /* scanQRList.plist */; };
+		D040B0711CCE6AE30052E357 /* LWAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = D040B0531CCE6AE30052E357 /* LWAlertView.m */; };
+		D040B0721CCE6AE30052E357 /* LWTools.m in Sources */ = {isa = PBXBuildFile; fileRef = D040B0551CCE6AE30052E357 /* LWTools.m */; };
+		D040B0731CCE6AE30052E357 /* LWScanQRCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D040B0581CCE6AE30052E357 /* LWScanQRCollectionViewCell.m */; };
+		D040B0741CCE6AE30052E357 /* LWScanViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D040B05D1CCE6AE30052E357 /* LWScanViewController.m */; };
+		D040B0751CCE6AE30052E357 /* LWScanLineAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = D040B0601CCE6AE30052E357 /* LWScanLineAnimation.m */; };
+		D040B0761CCE6AE30052E357 /* LWScanNetAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = D040B0621CCE6AE30052E357 /* LWScanNetAnimation.m */; };
+		D040B0771CCE6AE30052E357 /* LWScanResult.m in Sources */ = {isa = PBXBuildFile; fileRef = D040B0641CCE6AE30052E357 /* LWScanResult.m */; };
+		D040B0781CCE6AE30052E357 /* LWScanSystem.m in Sources */ = {isa = PBXBuildFile; fileRef = D040B0661CCE6AE30052E357 /* LWScanSystem.m */; };
+		D040B0791CCE6AE30052E357 /* LWScanViewStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = D040B0681CCE6AE30052E357 /* LWScanViewStyle.m */; };
+		D040B07A1CCE6AE30052E357 /* LWScanView.m in Sources */ = {isa = PBXBuildFile; fileRef = D040B06B1CCE6AE30052E357 /* LWScanView.m */; };
+		D047B7421CCE781E00DE57FB /* listView.bundle in Resources */ = {isa = PBXBuildFile; fileRef = D047B7411CCE781E00DE57FB /* listView.bundle */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		D040B02C1CCE6A8C0052E357 /* ScanAndQR-OC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ScanAndQR-OC.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D040B0301CCE6A8C0052E357 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		D040B0321CCE6A8C0052E357 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = ../AppDelegate.h; sourceTree = "<group>"; };
+		D040B0331CCE6A8C0052E357 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = ../AppDelegate.m; sourceTree = "<group>"; };
+		D040B0391CCE6A8C0052E357 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		D040B03B1CCE6A8C0052E357 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = ../Assets.xcassets; sourceTree = "<group>"; };
+		D040B03E1CCE6A8C0052E357 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		D040B0401CCE6A8C0052E357 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = ../Info.plist; sourceTree = "<group>"; };
+		D040B0471CCE6AE30052E357 /* CodeScan.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = CodeScan.bundle; sourceTree = "<group>"; };
+		D040B0491CCE6AE30052E357 /* LWScanQRViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LWScanQRViewController.h; sourceTree = "<group>"; };
+		D040B04A1CCE6AE30052E357 /* LWScanQRViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LWScanQRViewController.m; sourceTree = "<group>"; };
+		D040B04D1CCE6AE30052E357 /* LWScanQRModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LWScanQRModel.h; sourceTree = "<group>"; };
+		D040B04E1CCE6AE30052E357 /* LWScanQRModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LWScanQRModel.m; sourceTree = "<group>"; };
+		D040B0501CCE6AE30052E357 /* scanQRList.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = scanQRList.plist; sourceTree = "<group>"; };
+		D040B0521CCE6AE30052E357 /* LWAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LWAlertView.h; sourceTree = "<group>"; };
+		D040B0531CCE6AE30052E357 /* LWAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LWAlertView.m; sourceTree = "<group>"; };
+		D040B0541CCE6AE30052E357 /* LWTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LWTools.h; sourceTree = "<group>"; };
+		D040B0551CCE6AE30052E357 /* LWTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LWTools.m; sourceTree = "<group>"; };
+		D040B0571CCE6AE30052E357 /* LWScanQRCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LWScanQRCollectionViewCell.h; sourceTree = "<group>"; };
+		D040B0581CCE6AE30052E357 /* LWScanQRCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LWScanQRCollectionViewCell.m; sourceTree = "<group>"; };
+		D040B05C1CCE6AE30052E357 /* LWScanViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LWScanViewController.h; sourceTree = "<group>"; };
+		D040B05D1CCE6AE30052E357 /* LWScanViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LWScanViewController.m; sourceTree = "<group>"; };
+		D040B05F1CCE6AE30052E357 /* LWScanLineAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LWScanLineAnimation.h; sourceTree = "<group>"; };
+		D040B0601CCE6AE30052E357 /* LWScanLineAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LWScanLineAnimation.m; sourceTree = "<group>"; };
+		D040B0611CCE6AE30052E357 /* LWScanNetAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LWScanNetAnimation.h; sourceTree = "<group>"; };
+		D040B0621CCE6AE30052E357 /* LWScanNetAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LWScanNetAnimation.m; sourceTree = "<group>"; };
+		D040B0631CCE6AE30052E357 /* LWScanResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LWScanResult.h; sourceTree = "<group>"; };
+		D040B0641CCE6AE30052E357 /* LWScanResult.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LWScanResult.m; sourceTree = "<group>"; };
+		D040B0651CCE6AE30052E357 /* LWScanSystem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LWScanSystem.h; sourceTree = "<group>"; };
+		D040B0661CCE6AE30052E357 /* LWScanSystem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LWScanSystem.m; sourceTree = "<group>"; };
+		D040B0671CCE6AE30052E357 /* LWScanViewStyle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LWScanViewStyle.h; sourceTree = "<group>"; };
+		D040B0681CCE6AE30052E357 /* LWScanViewStyle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LWScanViewStyle.m; sourceTree = "<group>"; };
+		D040B06A1CCE6AE30052E357 /* LWScanView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LWScanView.h; sourceTree = "<group>"; };
+		D040B06B1CCE6AE30052E357 /* LWScanView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LWScanView.m; sourceTree = "<group>"; };
+		D047B7411CCE781E00DE57FB /* listView.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = listView.bundle; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D040B0291CCE6A8C0052E357 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		D040B0231CCE6A8C0052E357 = {
+			isa = PBXGroup;
+			children = (
+				D040B02E1CCE6A8C0052E357 /* ScanAndQR-OC */,
+				D040B02D1CCE6A8C0052E357 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		D040B02D1CCE6A8C0052E357 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D040B02C1CCE6A8C0052E357 /* ScanAndQR-OC.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D040B02E1CCE6A8C0052E357 /* ScanAndQR-OC */ = {
+			isa = PBXGroup;
+			children = (
+				D040B0461CCE6AE30052E357 /* Public */,
+				D040B0591CCE6AE30052E357 /* QR */,
+				D040B05A1CCE6AE30052E357 /* Scan */,
+				D040B02F1CCE6A8C0052E357 /* Supporting Files */,
+			);
+			path = "ScanAndQR-OC";
+			sourceTree = "<group>";
+		};
+		D040B02F1CCE6A8C0052E357 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				D040B0301CCE6A8C0052E357 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		D040B0461CCE6AE30052E357 /* Public */ = {
+			isa = PBXGroup;
+			children = (
+				D040B0561CCE6AE30052E357 /* View */,
+				D040B0511CCE6AE30052E357 /* Tools */,
+				D040B04C1CCE6AE30052E357 /* Model */,
+				D040B0481CCE6AE30052E357 /* Controller */,
+				D040B0471CCE6AE30052E357 /* CodeScan.bundle */,
+				D047B7411CCE781E00DE57FB /* listView.bundle */,
+				D040B0381CCE6A8C0052E357 /* Main.storyboard */,
+				D040B0321CCE6A8C0052E357 /* AppDelegate.h */,
+				D040B0331CCE6A8C0052E357 /* AppDelegate.m */,
+				D040B03B1CCE6A8C0052E357 /* Assets.xcassets */,
+				D040B03D1CCE6A8C0052E357 /* LaunchScreen.storyboard */,
+				D040B0401CCE6A8C0052E357 /* Info.plist */,
+				D040B0501CCE6AE30052E357 /* scanQRList.plist */,
+			);
+			path = Public;
+			sourceTree = "<group>";
+		};
+		D040B0481CCE6AE30052E357 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				D040B0491CCE6AE30052E357 /* LWScanQRViewController.h */,
+				D040B04A1CCE6AE30052E357 /* LWScanQRViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		D040B04C1CCE6AE30052E357 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D040B04D1CCE6AE30052E357 /* LWScanQRModel.h */,
+				D040B04E1CCE6AE30052E357 /* LWScanQRModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		D040B0511CCE6AE30052E357 /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+				D040B0521CCE6AE30052E357 /* LWAlertView.h */,
+				D040B0531CCE6AE30052E357 /* LWAlertView.m */,
+				D040B0541CCE6AE30052E357 /* LWTools.h */,
+				D040B0551CCE6AE30052E357 /* LWTools.m */,
+			);
+			path = Tools;
+			sourceTree = "<group>";
+		};
+		D040B0561CCE6AE30052E357 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D040B0571CCE6AE30052E357 /* LWScanQRCollectionViewCell.h */,
+				D040B0581CCE6AE30052E357 /* LWScanQRCollectionViewCell.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		D040B0591CCE6AE30052E357 /* QR */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = QR;
+			sourceTree = "<group>";
+		};
+		D040B05A1CCE6AE30052E357 /* Scan */ = {
+			isa = PBXGroup;
+			children = (
+				D040B05B1CCE6AE30052E357 /* Controller */,
+				D040B05E1CCE6AE30052E357 /* Tools */,
+				D040B0691CCE6AE30052E357 /* View */,
+			);
+			path = Scan;
+			sourceTree = "<group>";
+		};
+		D040B05B1CCE6AE30052E357 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				D040B05C1CCE6AE30052E357 /* LWScanViewController.h */,
+				D040B05D1CCE6AE30052E357 /* LWScanViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		D040B05E1CCE6AE30052E357 /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+				D040B05F1CCE6AE30052E357 /* LWScanLineAnimation.h */,
+				D040B0601CCE6AE30052E357 /* LWScanLineAnimation.m */,
+				D040B0611CCE6AE30052E357 /* LWScanNetAnimation.h */,
+				D040B0621CCE6AE30052E357 /* LWScanNetAnimation.m */,
+				D040B0631CCE6AE30052E357 /* LWScanResult.h */,
+				D040B0641CCE6AE30052E357 /* LWScanResult.m */,
+				D040B0651CCE6AE30052E357 /* LWScanSystem.h */,
+				D040B0661CCE6AE30052E357 /* LWScanSystem.m */,
+				D040B0671CCE6AE30052E357 /* LWScanViewStyle.h */,
+				D040B0681CCE6AE30052E357 /* LWScanViewStyle.m */,
+			);
+			path = Tools;
+			sourceTree = "<group>";
+		};
+		D040B0691CCE6AE30052E357 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D040B06A1CCE6AE30052E357 /* LWScanView.h */,
+				D040B06B1CCE6AE30052E357 /* LWScanView.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D040B02B1CCE6A8C0052E357 /* ScanAndQR-OC */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D040B0431CCE6A8C0052E357 /* Build configuration list for PBXNativeTarget "ScanAndQR-OC" */;
+			buildPhases = (
+				D040B0281CCE6A8C0052E357 /* Sources */,
+				D040B0291CCE6A8C0052E357 /* Frameworks */,
+				D040B02A1CCE6A8C0052E357 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "ScanAndQR-OC";
+			productName = "ScanAndQR-OC";
+			productReference = D040B02C1CCE6A8C0052E357 /* ScanAndQR-OC.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D040B0241CCE6A8C0052E357 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = LW;
+				TargetAttributes = {
+					D040B02B1CCE6A8C0052E357 = {
+						CreatedOnToolsVersion = 7.3;
+						DevelopmentTeam = 2S87YM5WH6;
+					};
+				};
+			};
+			buildConfigurationList = D040B0271CCE6A8C0052E357 /* Build configuration list for PBXProject "ScanAndQR-OC" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = D040B0231CCE6A8C0052E357;
+			productRefGroup = D040B02D1CCE6A8C0052E357 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D040B02B1CCE6A8C0052E357 /* ScanAndQR-OC */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D040B02A1CCE6A8C0052E357 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D040B03F1CCE6A8C0052E357 /* LaunchScreen.storyboard in Resources */,
+				D040B03C1CCE6A8C0052E357 /* Assets.xcassets in Resources */,
+				D047B7421CCE781E00DE57FB /* listView.bundle in Resources */,
+				D040B03A1CCE6A8C0052E357 /* Main.storyboard in Resources */,
+				D040B0701CCE6AE30052E357 /* scanQRList.plist in Resources */,
+				D040B06C1CCE6AE30052E357 /* CodeScan.bundle in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D040B0281CCE6A8C0052E357 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D040B07A1CCE6AE30052E357 /* LWScanView.m in Sources */,
+				D040B0761CCE6AE30052E357 /* LWScanNetAnimation.m in Sources */,
+				D040B0791CCE6AE30052E357 /* LWScanViewStyle.m in Sources */,
+				D040B0731CCE6AE30052E357 /* LWScanQRCollectionViewCell.m in Sources */,
+				D040B06D1CCE6AE30052E357 /* LWScanQRViewController.m in Sources */,
+				D040B0771CCE6AE30052E357 /* LWScanResult.m in Sources */,
+				D040B06F1CCE6AE30052E357 /* LWScanQRModel.m in Sources */,
+				D040B0341CCE6A8C0052E357 /* AppDelegate.m in Sources */,
+				D040B0741CCE6AE30052E357 /* LWScanViewController.m in Sources */,
+				D040B0781CCE6AE30052E357 /* LWScanSystem.m in Sources */,
+				D040B0751CCE6AE30052E357 /* LWScanLineAnimation.m in Sources */,
+				D040B0711CCE6AE30052E357 /* LWAlertView.m in Sources */,
+				D040B0721CCE6AE30052E357 /* LWTools.m in Sources */,
+				D040B0311CCE6A8C0052E357 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		D040B0381CCE6A8C0052E357 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D040B0391CCE6A8C0052E357 /* Base */,
+			);
+			name = Main.storyboard;
+			path = ..;
+			sourceTree = "<group>";
+		};
+		D040B03D1CCE6A8C0052E357 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D040B03E1CCE6A8C0052E357 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			path = ..;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		D040B0411CCE6A8C0052E357 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		D040B0421CCE6A8C0052E357 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D040B0441CCE6A8C0052E357 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "ScanAndQR-OC/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.liwei.ScanAndQR-OC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		D040B0451CCE6A8C0052E357 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "ScanAndQR-OC/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.liwei.ScanAndQR-OC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D040B0271CCE6A8C0052E357 /* Build configuration list for PBXProject "ScanAndQR-OC" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D040B0411CCE6A8C0052E357 /* Debug */,
+				D040B0421CCE6A8C0052E357 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D040B0431CCE6A8C0052E357 /* Build configuration list for PBXNativeTarget "ScanAndQR-OC" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D040B0441CCE6A8C0052E357 /* Debug */,
+				D040B0451CCE6A8C0052E357 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D040B0241CCE6A8C0052E357 /* Project object */;
+}
