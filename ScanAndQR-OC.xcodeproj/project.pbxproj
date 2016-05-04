@@ -27,6 +27,7 @@
 		D040B0791CCE6AE30052E357 /* LWScanViewStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = D040B0681CCE6AE30052E357 /* LWScanViewStyle.m */; };
 		D040B07A1CCE6AE30052E357 /* LWScanView.m in Sources */ = {isa = PBXBuildFile; fileRef = D040B06B1CCE6AE30052E357 /* LWScanView.m */; };
 		D047B7421CCE781E00DE57FB /* listView.bundle in Resources */ = {isa = PBXBuildFile; fileRef = D047B7411CCE781E00DE57FB /* listView.bundle */; };
+		D04935F61CCFA98000072F4D /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D04935F51CCFA98000072F4D /* AVFoundation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -65,6 +66,7 @@
 		D040B06A1CCE6AE30052E357 /* LWScanView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LWScanView.h; sourceTree = "<group>"; };
 		D040B06B1CCE6AE30052E357 /* LWScanView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LWScanView.m; sourceTree = "<group>"; };
 		D047B7411CCE781E00DE57FB /* listView.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = listView.bundle; sourceTree = "<group>"; };
+		D04935F51CCFA98000072F4D /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +74,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D04935F61CCFA98000072F4D /* AVFoundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -108,6 +111,7 @@
 		D040B02F1CCE6A8C0052E357 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				D04935F51CCFA98000072F4D /* AVFoundation.framework */,
 				D040B0301CCE6A8C0052E357 /* main.m */,
 			);
 			name = "Supporting Files";

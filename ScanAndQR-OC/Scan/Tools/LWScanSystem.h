@@ -28,7 +28,7 @@
  @brief   设置扫码成功后是否拍照
  @param   isNeedCaptureImage  YES:拍照  NO：不拍照
  */
-- (void)setNeedCaptureImage:(BOOL)inNeedCaptureImage;
+- (void)setNeedCaptureImage:(BOOL)isNeedCaptureImage;
 /** 开始扫码 */
 - (void)startScan;
 /** 停止扫码 */
