@@ -2,8 +2,8 @@
 //  LWScanSystem.m
 //  OCScanAndQR
 //
-//  Created by 张星星 on 16/4/24.
-//  Copyright © 2016年 LW. All rights reserved.
+//  Created by 张星星 on 17/4/24.
+//  Copyright © 2017年 LW. All rights reserved.
 //
 
 #import "LWScanSystem.h"
@@ -66,14 +66,12 @@
 #pragma mark - 系统扫描
 @implementation LWScanSystem
 #pragma mark   设置扫码成功后是否拍照
-- (void)setNeedCaptureImage:(BOOL)isNeedCaptureImage
-{
+- (void)setNeedCaptureImage:(BOOL)isNeedCaptureImage {
     _isNeedCaptureImage = isNeedCaptureImage;
 }
 
 #pragma mark  调整摄像头焦距
-- (void)setVideoScale:(CGFloat)scale
-{
+- (void)setVideoScale:(CGFloat)scale {
     _scale = scale;
     [self.input.device lockForConfiguration:nil];
     AVCaptureConnection *videoConnection = [self connectionWithMediaType:AVMediaTypeVideo fromConnections:[[self stillImageOutput] connections]];
@@ -86,8 +84,7 @@
 
 
 #pragma mark 开始扫码
-- (void)startScan
-{
+- (void)startScan {
     if (self.input != nil && self.session.isRunning == NO)
     {
         [self.session startRunning];
@@ -96,8 +93,7 @@
     }
 }
 #pragma mark 停止扫码
-- (void)stopScan
-{
+- (void)stopScan {
     if (self.input != nil && self.session.isRunning == YES)
     {
         self.isNeedScanResult = NO;
@@ -105,15 +101,13 @@
     }
 }
 #pragma mark 设置闪光灯
-- (void)setTorch:(BOOL)torch
-{
+- (void)setTorch:(BOOL)torch {
     [self.input.device lockForConfiguration:nil];
     self.input.device.torchMode = torch ? AVCaptureTorchModeOn : AVCaptureTorchModeOff;
     [self.input.device unlockForConfiguration];
 }
 #pragma mark 开关闪光灯
-- (void)changeTorch
-{
+- (void)changeTorch {
     AVCaptureTorchMode torch = self.input.device.torchMode;
     switch (torch) {
         case AVCaptureTorchModeAuto:
@@ -132,14 +126,12 @@
     [self.input.device unlockForConfiguration];
 }
 #pragma mark  修改扫码类型：二维码，条形码
-- (void)changeScanType:(NSArray *)objTypes
-{
+- (void)changeScanType:(NSArray *)objTypes {
 
 }
 
 #pragma mark 初始化采集相机
-- (instancetype)initWithPreView:(UIView *)preView ObjectType:(NSArray *)objType cropRect:(CGRect)cropRect success:(void(^)(NSArray<LWScanResult *> *array))block
-{
+- (instancetype)initWithPreView:(UIView *)preView ObjectType:(NSArray *)objType cropRect:(CGRect)cropRect success:(void(^)(NSArray<LWScanResult *> *array))block {
     self = [super init];
     if (self) {
         [self preView:preView ObjectType:objType cropRect:cropRect success:block];
@@ -154,8 +146,7 @@
 @implementation LWScanSystem (tools)
 
 #pragma mark 视频采集
-- (void)preView:(UIView *)preView ObjectType:(NSArray *)objType cropRect:(CGRect)cropRect success:(void(^)(NSArray<LWScanResult *> *array))block
-{
+- (void)preView:(UIView *)preView ObjectType:(NSArray *)objType cropRect:(CGRect)cropRect success:(void(^)(NSArray<LWScanResult *> *array))block {
     self.arrayCodeType = objType;
     self.blockScanResult = block;
     self.videoPreView = preView;
@@ -185,30 +176,29 @@
     if ([self.session canAddOutput:self.stillImageOutput])
         [self.session addOutput:self.stillImageOutput];
     if (objType == nil)
-        [self defaultMetaDataObjectTypes];
+      objType = [self defaultMetaDataObjectTypes];
     self.output.metadataObjectTypes = objType;
     
     // preview
     self.preview = [AVCaptureVideoPreviewLayer layerWithSession:self.session];
     self.preview.videoGravity = AVLayerVideoGravityResizeAspectFill;
-    self.preview.frame = CGRectMake(0, 0, self.preview.frame.size.width, self.preview.frame.size.height);
-    [preView.layer insertSublayer:self.preview atIndex:0];
+    self.preview.frame = CGRectMake(0, 0, self.videoPreView.frame.size.width, self.videoPreView.frame.size.height);
+    self.preview.backgroundColor = (__bridge CGColorRef _Nullable)([UIColor yellowColor]);
+    [self.videoPreView.layer insertSublayer:self.preview atIndex:0];
     AVCaptureConnection *videoConnection = [self connectionWithMediaType:AVMediaTypeVideo fromConnections: [[self stillImageOutput] connections]];
     CGFloat scale = videoConnection.videoScaleAndCropFactor;
+    NSLog(@"==== %f ===",scale);
     // 判断是否支持控制对焦，不然开启自动对焦
     if (self.device.isFocusPointOfInterestSupported && [self.device isFocusModeSupported:AVCaptureFocusModeAutoFocus]) {
         [self.input.device lockForConfiguration:nil];
         [self.input.device setFocusMode:AVCaptureFocusModeContinuousAutoFocus];
-        [self.init.device unlockForConfiguration];
+        [self.input.device unlockForConfiguration];
     }
     
-    
-    
-}
+ }
 
 #pragma mark 默认条码类型
-- (NSArray *)defaultMetaDataObjectTypes
-{
+- (NSArray *)defaultMetaDataObjectTypes {
     NSMutableArray *types = [@[AVMetadataObjectTypeQRCode,
                                AVMetadataObjectTypeUPCECode,
                                AVMetadataObjectTypeCode39Code,
@@ -234,8 +224,7 @@
 }
 
 #pragma mark 设置连接
-- (AVCaptureConnection *)connectionWithMediaType:(NSString *)mediaType fromConnections:(NSArray *)connections
-{
+- (AVCaptureConnection *)connectionWithMediaType:(NSString *)mediaType fromConnections:(NSArray *)connections {
     for (AVCaptureConnection *connection in connections) {
         for (AVCaptureInputPort *port in [connection inputPorts]) {
             if ([[port mediaType] isEqual:mediaType]) {
@@ -247,8 +236,7 @@
 }
 
 #pragma mark 得到扫描后的图像
-- (void)setCaptureImage
-{
+- (void)setCaptureImage {
     AVCaptureConnection *stillImageConnection =  [self connectionWithMediaType:AVMediaTypeVideo fromConnections:[[self stillImageOutput] connections]];
     [[self stillImageOutput] captureStillImageAsynchronouslyFromConnection:stillImageConnection completionHandler:^(CMSampleBufferRef imageDataSampleBuffer, NSError *error) {
         [self stopScan];
@@ -270,8 +258,7 @@
 #pragma mark - 系统扫描的工具AVCaptureMetadataOutputObjectsDelegate方法
 @implementation LWScanSystem (AVCaptureMetadataOutputObjectsDelegate)
 
-- (void)captureOutput:(AVCaptureOutput *)captureOutput didOutputMetadataObjects:(NSArray *)metadataObjects fromConnection:(AVCaptureConnection *)connection
-{
+- (void)captureOutput:(AVCaptureOutput *)captureOutput didOutputMetadataObjects:(NSArray *)metadataObjects fromConnection:(AVCaptureConnection *)connection {
     if (self.isNeedScanResult == NO)
         return;
     if (_arrayResult == nil)

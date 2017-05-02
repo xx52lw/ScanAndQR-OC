@@ -2,8 +2,8 @@
 //  LWScanSystem.h
 //  OCScanAndQR
 //
-//  Created by 张星星 on 16/4/24.
-//  Copyright © 2016年 LW. All rights reserved.
+//  Created by 张星星 on 17/4/24.
+//  Copyright © 2017年 LW. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
@@ -48,6 +48,7 @@
  @param  scale 系数
  */
 - (void)setVideoScale:(CGFloat)scale;
+
 
 @end
 // ====================================================================================================================================================================

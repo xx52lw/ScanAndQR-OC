@@ -2,8 +2,8 @@
 //  LWScanQRModel.m
 //  OCScanAndQR
 //
-//  Created by 张星星 on 16/4/23.
-//  Copyright © 2016年 LW. All rights reserved.
+//  Created by 张星星 on 17/4/23.
+//  Copyright © 2017年 LW. All rights reserved.
 //
 
 #import "LWScanQRModel.h"

@@ -16,18 +16,16 @@
 		D040B06D1CCE6AE30052E357 /* LWScanQRViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D040B04A1CCE6AE30052E357 /* LWScanQRViewController.m */; };
 		D040B06F1CCE6AE30052E357 /* LWScanQRModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D040B04E1CCE6AE30052E357 /* LWScanQRModel.m */; };
 		D040B0701CCE6AE30052E357 /* scanQRList.plist in Resources */ = {isa = PBXBuildFile; fileRef = D040B0501CCE6AE30052E357 /* scanQRList.plist */; };
-		D040B0711CCE6AE30052E357 /* LWAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = D040B0531CCE6AE30052E357 /* LWAlertView.m */; };
 		D040B0721CCE6AE30052E357 /* LWTools.m in Sources */ = {isa = PBXBuildFile; fileRef = D040B0551CCE6AE30052E357 /* LWTools.m */; };
 		D040B0731CCE6AE30052E357 /* LWScanQRCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D040B0581CCE6AE30052E357 /* LWScanQRCollectionViewCell.m */; };
 		D040B0741CCE6AE30052E357 /* LWScanViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D040B05D1CCE6AE30052E357 /* LWScanViewController.m */; };
-		D040B0751CCE6AE30052E357 /* LWScanLineAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = D040B0601CCE6AE30052E357 /* LWScanLineAnimation.m */; };
-		D040B0761CCE6AE30052E357 /* LWScanNetAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = D040B0621CCE6AE30052E357 /* LWScanNetAnimation.m */; };
 		D040B0771CCE6AE30052E357 /* LWScanResult.m in Sources */ = {isa = PBXBuildFile; fileRef = D040B0641CCE6AE30052E357 /* LWScanResult.m */; };
 		D040B0781CCE6AE30052E357 /* LWScanSystem.m in Sources */ = {isa = PBXBuildFile; fileRef = D040B0661CCE6AE30052E357 /* LWScanSystem.m */; };
-		D040B0791CCE6AE30052E357 /* LWScanViewStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = D040B0681CCE6AE30052E357 /* LWScanViewStyle.m */; };
 		D040B07A1CCE6AE30052E357 /* LWScanView.m in Sources */ = {isa = PBXBuildFile; fileRef = D040B06B1CCE6AE30052E357 /* LWScanView.m */; };
 		D047B7421CCE781E00DE57FB /* listView.bundle in Resources */ = {isa = PBXBuildFile; fileRef = D047B7411CCE781E00DE57FB /* listView.bundle */; };
 		D04935F61CCFA98000072F4D /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D04935F51CCFA98000072F4D /* AVFoundation.framework */; };
+		D0B9A0DE1EB88E1D00B100D1 /* LWScanResultViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0B9A0DD1EB88E1D00B100D1 /* LWScanResultViewController.m */; };
+		D0B9A0E11EB88E4E00B100D1 /* LWScanAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = D0B9A0E01EB88E4E00B100D1 /* LWScanAnimation.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,28 +43,24 @@
 		D040B04D1CCE6AE30052E357 /* LWScanQRModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LWScanQRModel.h; sourceTree = "<group>"; };
 		D040B04E1CCE6AE30052E357 /* LWScanQRModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LWScanQRModel.m; sourceTree = "<group>"; };
 		D040B0501CCE6AE30052E357 /* scanQRList.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = scanQRList.plist; sourceTree = "<group>"; };
-		D040B0521CCE6AE30052E357 /* LWAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LWAlertView.h; sourceTree = "<group>"; };
-		D040B0531CCE6AE30052E357 /* LWAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LWAlertView.m; sourceTree = "<group>"; };
 		D040B0541CCE6AE30052E357 /* LWTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LWTools.h; sourceTree = "<group>"; };
 		D040B0551CCE6AE30052E357 /* LWTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LWTools.m; sourceTree = "<group>"; };
 		D040B0571CCE6AE30052E357 /* LWScanQRCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LWScanQRCollectionViewCell.h; sourceTree = "<group>"; };
 		D040B0581CCE6AE30052E357 /* LWScanQRCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LWScanQRCollectionViewCell.m; sourceTree = "<group>"; };
 		D040B05C1CCE6AE30052E357 /* LWScanViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LWScanViewController.h; sourceTree = "<group>"; };
 		D040B05D1CCE6AE30052E357 /* LWScanViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LWScanViewController.m; sourceTree = "<group>"; };
-		D040B05F1CCE6AE30052E357 /* LWScanLineAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LWScanLineAnimation.h; sourceTree = "<group>"; };
-		D040B0601CCE6AE30052E357 /* LWScanLineAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LWScanLineAnimation.m; sourceTree = "<group>"; };
-		D040B0611CCE6AE30052E357 /* LWScanNetAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LWScanNetAnimation.h; sourceTree = "<group>"; };
-		D040B0621CCE6AE30052E357 /* LWScanNetAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LWScanNetAnimation.m; sourceTree = "<group>"; };
 		D040B0631CCE6AE30052E357 /* LWScanResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LWScanResult.h; sourceTree = "<group>"; };
 		D040B0641CCE6AE30052E357 /* LWScanResult.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LWScanResult.m; sourceTree = "<group>"; };
 		D040B0651CCE6AE30052E357 /* LWScanSystem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LWScanSystem.h; sourceTree = "<group>"; };
 		D040B0661CCE6AE30052E357 /* LWScanSystem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LWScanSystem.m; sourceTree = "<group>"; };
-		D040B0671CCE6AE30052E357 /* LWScanViewStyle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LWScanViewStyle.h; sourceTree = "<group>"; };
-		D040B0681CCE6AE30052E357 /* LWScanViewStyle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LWScanViewStyle.m; sourceTree = "<group>"; };
 		D040B06A1CCE6AE30052E357 /* LWScanView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LWScanView.h; sourceTree = "<group>"; };
 		D040B06B1CCE6AE30052E357 /* LWScanView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LWScanView.m; sourceTree = "<group>"; };
 		D047B7411CCE781E00DE57FB /* listView.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = listView.bundle; sourceTree = "<group>"; };
 		D04935F51CCFA98000072F4D /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		D0B9A0DC1EB88E1D00B100D1 /* LWScanResultViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LWScanResultViewController.h; sourceTree = "<group>"; };
+		D0B9A0DD1EB88E1D00B100D1 /* LWScanResultViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LWScanResultViewController.m; sourceTree = "<group>"; };
+		D0B9A0DF1EB88E4E00B100D1 /* LWScanAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LWScanAnimation.h; sourceTree = "<group>"; };
+		D0B9A0E01EB88E4E00B100D1 /* LWScanAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LWScanAnimation.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -142,6 +136,8 @@
 			children = (
 				D040B0491CCE6AE30052E357 /* LWScanQRViewController.h */,
 				D040B04A1CCE6AE30052E357 /* LWScanQRViewController.m */,
+				D0B9A0DC1EB88E1D00B100D1 /* LWScanResultViewController.h */,
+				D0B9A0DD1EB88E1D00B100D1 /* LWScanResultViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -158,8 +154,6 @@
 		D040B0511CCE6AE30052E357 /* Tools */ = {
 			isa = PBXGroup;
 			children = (
-				D040B0521CCE6AE30052E357 /* LWAlertView.h */,
-				D040B0531CCE6AE30052E357 /* LWAlertView.m */,
 				D040B0541CCE6AE30052E357 /* LWTools.h */,
 				D040B0551CCE6AE30052E357 /* LWTools.m */,
 			);
@@ -204,16 +198,12 @@
 		D040B05E1CCE6AE30052E357 /* Tools */ = {
 			isa = PBXGroup;
 			children = (
-				D040B05F1CCE6AE30052E357 /* LWScanLineAnimation.h */,
-				D040B0601CCE6AE30052E357 /* LWScanLineAnimation.m */,
-				D040B0611CCE6AE30052E357 /* LWScanNetAnimation.h */,
-				D040B0621CCE6AE30052E357 /* LWScanNetAnimation.m */,
+				D0B9A0DF1EB88E4E00B100D1 /* LWScanAnimation.h */,
+				D0B9A0E01EB88E4E00B100D1 /* LWScanAnimation.m */,
 				D040B0631CCE6AE30052E357 /* LWScanResult.h */,
 				D040B0641CCE6AE30052E357 /* LWScanResult.m */,
 				D040B0651CCE6AE30052E357 /* LWScanSystem.h */,
 				D040B0661CCE6AE30052E357 /* LWScanSystem.m */,
-				D040B0671CCE6AE30052E357 /* LWScanViewStyle.h */,
-				D040B0681CCE6AE30052E357 /* LWScanViewStyle.m */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -258,7 +248,7 @@
 				TargetAttributes = {
 					D040B02B1CCE6A8C0052E357 = {
 						CreatedOnToolsVersion = 7.3;
-						DevelopmentTeam = 2S87YM5WH6;
+						DevelopmentTeam = 3J428WRC9H;
 					};
 				};
 			};
@@ -301,18 +291,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D0B9A0DE1EB88E1D00B100D1 /* LWScanResultViewController.m in Sources */,
 				D040B07A1CCE6AE30052E357 /* LWScanView.m in Sources */,
-				D040B0761CCE6AE30052E357 /* LWScanNetAnimation.m in Sources */,
-				D040B0791CCE6AE30052E357 /* LWScanViewStyle.m in Sources */,
 				D040B0731CCE6AE30052E357 /* LWScanQRCollectionViewCell.m in Sources */,
 				D040B06D1CCE6AE30052E357 /* LWScanQRViewController.m in Sources */,
 				D040B0771CCE6AE30052E357 /* LWScanResult.m in Sources */,
 				D040B06F1CCE6AE30052E357 /* LWScanQRModel.m in Sources */,
 				D040B0341CCE6A8C0052E357 /* AppDelegate.m in Sources */,
 				D040B0741CCE6AE30052E357 /* LWScanViewController.m in Sources */,
+				D0B9A0E11EB88E4E00B100D1 /* LWScanAnimation.m in Sources */,
 				D040B0781CCE6AE30052E357 /* LWScanSystem.m in Sources */,
-				D040B0751CCE6AE30052E357 /* LWScanLineAnimation.m in Sources */,
-				D040B0711CCE6AE30052E357 /* LWAlertView.m in Sources */,
 				D040B0721CCE6AE30052E357 /* LWTools.m in Sources */,
 				D040B0311CCE6A8C0052E357 /* main.m in Sources */,
 			);
@@ -428,10 +416,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 3J428WRC9H;
 				INFOPLIST_FILE = "ScanAndQR-OC/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.liwei.ScanAndQR-OC";
+				PRODUCT_BUNDLE_IDENTIFIER = esteelauderba.net.winchannel.wincrm;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -440,10 +429,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 3J428WRC9H;
 				INFOPLIST_FILE = "ScanAndQR-OC/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.liwei.ScanAndQR-OC";
+				PRODUCT_BUNDLE_IDENTIFIER = esteelauderba.net.winchannel.wincrm;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;

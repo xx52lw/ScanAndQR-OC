@@ -2,8 +2,8 @@
 //  LWTools.m
 //  OCScanAndQR
 //
-//  Created by 张星星 on 16/4/23.
-//  Copyright © 2016年 LW. All rights reserved.
+//  Created by 张星星 on 17/4/23.
+//  Copyright © 2017年 LW. All rights reserved.
 //
 
 #import "LWTools.h"
@@ -12,8 +12,7 @@
 
 @implementation LWTools
 
-+ (UIImage *)iamgeName:(NSString *)imageName withBundleName:(NSString *)bundleName
-{
++ (UIImage *)iamgeName:(NSString *)imageName withBundleName:(NSString *)bundleName {
     if (imageName.length <= 0 || bundleName.length <= 0)
         return nil;
     UIImage *image = nil;
@@ -25,8 +24,7 @@
 }
 
 #pragma mark 检查相机或者相册是否可用
-+ (BOOL)checkCameraOrAblumAuthorityWith:(UIImagePickerControllerSourceType) souceType
-{
++ (BOOL)checkCameraOrAblumAuthorityWith:(UIImagePickerControllerSourceType) souceType {
     BOOL isAuthority = NO;
     if (souceType == UIImagePickerControllerSourceTypeCamera)
     {

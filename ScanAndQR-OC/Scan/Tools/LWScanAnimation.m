@@ -1,16 +1,16 @@
 //
-//  LWScanLineAnimation.m
+//  LWScanAnimation.m
 //  OCScanAndQR
 //
-//  Created by 张星星 on 16/4/23.
-//  Copyright © 2016年 LW. All rights reserved.
+//  Created by 张星星 on 17/4/23.
+//  Copyright © 2017年 LW. All rights reserved.
 //
 
-#import "LWScanLineAnimation.h"
+#import "LWScanAnimation.h"
 static CGFloat margin = 5.0f;     // 动画线距扫描区域的间距
 // ===================================================================================================================================================================
 #pragma mark - 线性动画的View的私有属性和方法
-@interface LWScanLineAnimation ()
+@interface LWScanAnimation ()
 
 /** 执行动画的区域 */
 @property (nonatomic,assign) CGRect       animationRect;
@@ -22,33 +22,32 @@ static CGFloat margin = 5.0f;     // 动画线距扫描区域的间距
 @end
 // ===================================================================================================================================================================
 #pragma mark - 线性动画的View的tools方法
-@interface LWScanLineAnimation (tools)
+@interface LWScanAnimation (tools)
 
 - (void)beginAnimationing;     // 开启动画
 
 @end
 // ===================================================================================================================================================================
 #pragma mark - 线性动画的View
-@implementation LWScanLineAnimation
+@implementation LWScanAnimation
 
 #pragma mark 重写dealloc方法
-- (void)dealloc
-{
+- (void)dealloc {
     [self stopAnimating];
 }
 
 #pragma mark 开始扫描动画
-- (void)startAnimatingWithFrame:(CGRect)animationFrame inView:(UIView *)superView withImage:(UIImage *)animationImage
-{
+- (void)startAnimatingWithFrame:(CGRect)animationFrame inView:(UIView *)superView withImage:(UIImage *)animationImage {
     if (self.isAnimationing == YES || superView == nil)
         return;
+    self.image = animationImage;
     self.isAnimationing = YES;
     self.animationRect = animationFrame;
     self.isAnimationDown = YES;
-    CGFloat x = animationFrame.origin.x + margin;
-    CGFloat w = animationFrame.size.width - margin * 2;
-    CGFloat y = CGRectGetMidY(animationFrame);
-    CGFloat h = 2.0f;
+    CGFloat h = animationImage.size.height;
+    CGFloat w = animationImage.size.width;
+    CGFloat x = CGRectGetMidX(self.animationRect) - w / 2;
+    CGFloat y = CGRectGetMinY(self.animationRect) - h;
     self.backgroundColor = [UIColor clearColor];
     self.frame = CGRectMake(x, y, w, h);
     [superView addSubview:self];
@@ -57,8 +56,7 @@ static CGFloat margin = 5.0f;     // 动画线距扫描区域的间距
 }
 
 #pragma mark  停止动画
-- (void)stopAnimating
-{
+- (void)stopAnimating {
     if (self.isAnimationing == YES) {
         self.isAnimationing = NO;
         self.hidden = YES;
@@ -70,18 +68,16 @@ static CGFloat margin = 5.0f;     // 动画线距扫描区域的间距
 @end
 // ===================================================================================================================================================================
 #pragma mark - 线性动画的View的tools方法实现
-@implementation LWScanLineAnimation (tools)
+@implementation LWScanAnimation (tools)
 
 #pragma mark 开启动画
-- (void)beginAnimationing
-{
+- (void)beginAnimationing {
     if (self.isAnimationing == NO)
         return;
-    self.isAnimationing = NO;
-    CGFloat y = self.animationRect.origin.y + margin;
-    CGFloat x = self.animationRect.origin.x + margin;
-    CGFloat w = self.animationRect.size.width - margin * 2;
-    CGFloat h = margin * 2;
+    CGFloat x = self.frame.origin.x;
+    CGFloat w = self.frame.size.width;
+    CGFloat h = self.frame.size.height;
+    CGFloat y = CGRectGetMinY(self.animationRect) - h;
     self.frame = CGRectMake(x, y, w, h);
     self.alpha = 0.0f;
     self.hidden = NO;
@@ -90,7 +86,7 @@ static CGFloat margin = 5.0f;     // 动画线距扫描区域的间距
         wself.alpha = 1.0f;
     } completion:^(BOOL finished) {
        [UIView animateWithDuration:2.0f animations:^{
-           wself.frame = CGRectMake(x, y + (self.animationRect.size.height - margin), w, margin);
+           wself.frame = CGRectMake(x, CGRectGetMaxY(self.animationRect) - h, w, h);
        } completion:^(BOOL finished) {
            wself.alpha = 0.0f;
            [wself performSelector:@selector(beginAnimationing) withObject:nil afterDelay:0.3f];

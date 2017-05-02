@@ -6,73 +6,9 @@
 		<key>imageName</key>
 		<string>0</string>
 		<key>title</key>
-		<string>QQ扫码</string>
+		<string>扫码</string>
 		<key>style</key>
-		<string>qqStyle</string>
-	</dict>
-	<dict>
-		<key>imageName</key>
-		<string>1</string>
-		<key>title</key>
-		<string>支付宝扫码</string>
-		<key>style</key>
-		<string>zhifuStyle</string>
-	</dict>
-	<dict>
-		<key>imageName</key>
-		<string>2</string>
-		<key>title</key>
-		<string>微信扫码</string>
-		<key>style</key>
-		<string>wechatStyle</string>
-	</dict>
-	<dict>
-		<key>imageName</key>
-		<string>3</string>
-		<key>title</key>
-		<string>无边框</string>
-		<key>style</key>
-		<string>innerStyle</string>
-	</dict>
-	<dict>
-		<key>imageName</key>
-		<string>4</string>
-		<key>title</key>
-		<string>网格动画</string>
-		<key>style</key>
-		<string>onStyle</string>
-	</dict>
-	<dict>
-		<key>imageName</key>
-		<string>5</string>
-		<key>title</key>
-		<string>自定义颜色</string>
-		<key>style</key>
-		<string>colorStyle</string>
-	</dict>
-	<dict>
-		<key>imageName</key>
-		<string>6</string>
-		<key>title</key>
-		<string>可识别框外</string>
-		<key>style</key>
-		<string>outStyle</string>
-	</dict>
-	<dict>
-		<key>imageName</key>
-		<string>7</string>
-		<key>title</key>
-		<string>改变尺寸</string>
-		<key>style</key>
-		<string>changeStyle</string>
-	</dict>
-	<dict>
-		<key>imageName</key>
-		<string>8</string>
-		<key>title</key>
-		<string>条形码效果</string>
-		<key>style</key>
-		<string>notStyle</string>
+		<string>scanStyle</string>
 	</dict>
 	<dict>
 		<key>imageName</key>

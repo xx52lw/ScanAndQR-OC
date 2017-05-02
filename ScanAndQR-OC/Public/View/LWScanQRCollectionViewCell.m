@@ -2,8 +2,8 @@
 //  LWScanQRCollectionViewCell.m
 //  OCScanAndQR
 //
-//  Created by 张星星 on 16/4/23.
-//  Copyright © 2016年 LW. All rights reserved.
+//  Created by 张星星 on 17/4/23.
+//  Copyright © 2017年 LW. All rights reserved.
 //
 
 #import "LWScanQRCollectionViewCell.h"
@@ -13,23 +13,20 @@
 // ====================================================================================================================================================================
 @implementation LWScanQRCollectionViewCell
 
-- (UIImageView *)imageView
-{
+- (UIImageView *)imageView {
     if (_imageView == nil)
         _imageView = [[UIImageView alloc]init];
     return _imageView;
 }
 
-- (UILabel *)titelLabel
-{
+- (UILabel *)titelLabel {
     if (_titelLabel == nil)
         _titelLabel = [[UILabel alloc]init];
     return _titelLabel;
 }
 
 #pragma mark - 重写 initWithFrame:
-- (instancetype)initWithFrame:(CGRect)frame
-{
+- (instancetype)initWithFrame:(CGRect)frame {
     self = [super initWithFrame:frame];
     if (self) {
         self.backgroundColor = [UIColor greenColor];
@@ -39,8 +36,7 @@
     return self;
 }
 
-- (void)setModel:(LWScanQRModel *)model
-{
+- (void)setModel:(LWScanQRModel *)model {
     _model = model;
     
     UIImage *image = [LWTools iamgeName:model.imageName withBundleName:@"listView"];
