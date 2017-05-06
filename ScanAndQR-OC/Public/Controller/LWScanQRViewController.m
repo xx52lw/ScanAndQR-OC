@@ -11,7 +11,7 @@
 #import "LWScanQRModel.h"
 #import "LWTools.h"
 #import "LWScanViewController.h"
-
+#import "LWQRViewController.h"
 static NSString *ID = @"LWScanQRCollectionViewCell";
 static CGFloat  Margin = 10.0f;
 
@@ -108,7 +108,8 @@ static CGFloat  Margin = 10.0f;
 }
 #pragma mark 二维码条形码
 - (void)qrStyle {
-
+    LWQRViewController * vc = [[LWQRViewController alloc] init];
+    [self.navigationController pushViewController:vc animated:YES];
 }
 #pragma mark 相册
 - (void)photoStyle {

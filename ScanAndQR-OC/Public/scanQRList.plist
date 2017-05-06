@@ -12,19 +12,11 @@
 	</dict>
 	<dict>
 		<key>imageName</key>
-		<string>9</string>
+		<string>1</string>
 		<key>title</key>
 		<string>二维码条形码</string>
 		<key>style</key>
 		<string>qrStyle</string>
-	</dict>
-	<dict>
-		<key>imageName</key>
-		<string>10</string>
-		<key>title</key>
-		<string>相册</string>
-		<key>style</key>
-		<string>photoStyle</string>
 	</dict>
 </array>
 </plist>
