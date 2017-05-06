@@ -14,6 +14,8 @@
 
 /** 图片添加图片 */
 + (UIImage *)addImageWithOldImage:(UIImage *)oldImage withImage:(UIImage *)image drawInRect:(CGRect)rect;
+/** 根据编码生成图片 */
++ (UIImage *)creatImageWithCode:(NSString *)code withString:(NSString*)string withSize:(CGSize)size withQRColor:(UIColor*)color withBgColor:(UIColor*)bgColor;
 
 @end
 // ====================================================================================================================================================================
@@ -26,33 +28,56 @@
 }
 #pragma mark 创建二维码 附带logo
 + (UIImage *)createQRWithString:(NSString *)qrString withSize:(CGSize)qrSize withLogoImage:(UIImage *)logoImage withLogoSize:(CGSize)logoSize {
-    return [self createQRWithString:qrString withSize:qrSize withQRColor:[UIColor blackColor] qrSizeQRBgColor:[UIColor whiteColor] withLogoImage:logoImage withLogoSize:logoSize];
+    return [self createQRWithString:qrString withSize:qrSize withQRColor:[UIColor blackColor] withBgColor:[UIColor whiteColor] withLogoImage:logoImage withLogoSize:logoSize];
 }
 #pragma mark 生成二维码，背景色及二维码颜色
-+ (UIImage*)createQRWithString:(NSString*)qrString withSize:(CGSize)qrSize withQRColor:(UIColor*)qrColor qrSizeQRBgColor:(UIColor*)bgColor {
-    return [self createQRWithString:qrString withSize:qrSize withQRColor:qrColor qrSizeQRBgColor:bgColor withLogoImage:nil withLogoSize:CGSizeZero];
++ (UIImage*)createQRWithString:(NSString*)qrString withSize:(CGSize)qrSize withQRColor:(UIColor*)qrColor withBgColor:(UIColor*)bgColor {
+    return [self createQRWithString:qrString withSize:qrSize withQRColor:qrColor withBgColor:bgColor withLogoImage:nil withLogoSize:CGSizeZero];
 }
 #pragma mark 生成二维码，背景色及二维码颜色 附带logo
-+ (UIImage*)createQRWithString:(NSString*)qrString withSize:(CGSize)qrSize withQRColor:(UIColor*)qrColor qrSizeQRBgColor:(UIColor*)bgColor withLogoImage:(UIImage *)logoImage withLogoSize:(CGSize)logoSize {
-    if (qrSize.width * qrSize.height <= 0) {
++ (UIImage*)createQRWithString:(NSString*)qrString withSize:(CGSize)qrSize withQRColor:(UIColor*)qrColor withBgColor:(UIColor*)bgColor withLogoImage:(UIImage *)logoImage withLogoSize:(CGSize)logoSize {
+    UIImage *qrImage = [self creatImageWithCode:@"CIQRCodeGenerator" withString:qrString withSize:qrSize withQRColor:qrColor withBgColor:bgColor];
+    if (logoImage != nil && logoSize.width * logoSize.height > 0) {
+        if (logoSize.width > qrSize.width / 4) { // 注意尺寸不要太大（最大不超过二维码图片的%30），太大会造成扫不出来
+            logoSize = CGSizeMake(qrSize.width / 5, (logoSize.height / logoSize.width) * (qrSize.width / 5));
+        }
+        return [self addImageWithOldImage:qrImage withImage:logoImage drawInRect:CGRectMake((qrSize.width - logoSize.width) / 2, (qrSize.height - logoSize.height) / 2, logoSize.width, logoSize.height)];
+    }
+    return qrImage;
+
+}
+/** 生成条形码 */
++ (UIImage *)createGenerator:(NSString *)generatorString withSize:(CGSize)generatorgSize {
+    return [self createGenerator:generatorString withSize:generatorgSize withColor:[UIColor blackColor] withBgColor:[UIColor whiteColor]];
+}
+/** 生成条形码 背景色及条形码颜色*/
++ (UIImage *)createGenerator:(NSString *)generatorString withSize:(CGSize)generatorgSize withColor:(UIColor*)color withBgColor:(UIColor*)bgColor {
+  return  [self creatImageWithCode:@"CICode128BarcodeGenerator" withString:generatorString withSize:generatorgSize withQRColor:color withBgColor:bgColor];
+}
+
+/** 根据编码生成图片 */
++ (UIImage *)creatImageWithCode:(NSString *)code withString:(NSString*)string withSize:(CGSize)size withQRColor:(UIColor*)color withBgColor:(UIColor*)bgColor {
+    if (size.width * size.height <= 0) {
         return [[UIImage alloc] init];
     }
-    NSData *stringData = [qrString dataUsingEncoding: NSUTF8StringEncoding];
+    NSData *stringData = [string dataUsingEncoding: NSUTF8StringEncoding];
     //生成
-    CIFilter *qrFilter = [CIFilter filterWithName:@"CIQRCodeGenerator"];
+    CIFilter *qrFilter = [CIFilter filterWithName:code];
     [qrFilter setValue:stringData forKey:@"inputMessage"];
-    [qrFilter setValue:@"H" forKey:@"inputCorrectionLevel"];
+    if ([code isEqualToString:@"CIQRCodeGenerator"]) { //设置二维码的纠错水平，纠错水平越高，可以污损的范围越大
+        [qrFilter setValue:@"H" forKey:@"inputCorrectionLevel"];
+    }
     //上色
     CIFilter *colorFilter = [CIFilter filterWithName:@"CIFalseColor"
                                        keysAndValues:
                              @"inputImage",qrFilter.outputImage,
-                             @"inputColor0",[CIColor colorWithCGColor:qrColor.CGColor],
+                             @"inputColor0",[CIColor colorWithCGColor:color.CGColor],
                              @"inputColor1",[CIColor colorWithCGColor:bgColor.CGColor],
                              nil];
     CIImage *qrImage = colorFilter.outputImage;
     //绘制
     CGImageRef cgImage = [[CIContext contextWithOptions:nil] createCGImage:qrImage fromRect:qrImage.extent];
-    UIGraphicsBeginImageContext(qrSize);
+    UIGraphicsBeginImageContext(size);
     CGContextRef context = UIGraphicsGetCurrentContext();
     CGContextSetInterpolationQuality(context, kCGInterpolationNone);
     CGContextScaleCTM(context, 1.0, -1.0);
@@ -60,16 +85,9 @@
     CGImageRelease(cgImage);
     UIImage *codeImage = UIGraphicsGetImageFromCurrentImageContext();
     UIGraphicsEndImageContext();
-    if (logoImage != nil && logoSize.width * logoSize.height > 0) {
-        if (logoSize.width > qrSize.width / 4) { // 最大四分之一比较合适
-            logoSize = CGSizeMake(qrSize.width / 5, (logoSize.height / logoSize.width) * (qrSize.width / 5));
-        }
-        return [self addImageWithOldImage:codeImage withImage:logoImage drawInRect:CGRectMake((qrSize.width - logoSize.width) / 2, (qrSize.height - logoSize.height) / 2, logoSize.width, logoSize.height)];
-    }
     return codeImage;
 
 }
-
 #pragma mark 生成圆角图片
 + (UIImage *)roundedCornerImageWithImage:(UIImage*)image withCornerRadius:(CGFloat)cornerRadius withBoderWidth:(CGFloat)boderWidth withBorderColor:(UIColor *)borderColor {
     CGFloat w = image.size.width;
@@ -95,6 +113,7 @@
     UIGraphicsEndImageContext();
     return newImage;
 }
+
 
 @end
 // ====================================================================================================================================================================

@@ -17,10 +17,13 @@
 /** 创建二维码 附带logo */
 + (UIImage *)createQRWithString:(NSString *)qrString withSize:(CGSize)qrSize withLogoImage:(UIImage *)logoImage withLogoSize:(CGSize)logoSize;
 /** 生成二维码，背景色及二维码颜色 */
-+ (UIImage*)createQRWithString:(NSString*)qrString withSize:(CGSize)qrSize withQRColor:(UIColor*)qrColor qrSizeQRBgColor:(UIColor*)bgColor;
++ (UIImage*)createQRWithString:(NSString*)qrString withSize:(CGSize)qrSize withQRColor:(UIColor*)qrColor withBgColor:(UIColor*)bgColor;
 /** 生成二维码，背景色及二维码颜色 附带logo */
-+ (UIImage*)createQRWithString:(NSString*)qrString withSize:(CGSize)qrSize withQRColor:(UIColor*)qrColor qrSizeQRBgColor:(UIColor*)bgColor withLogoImage:(UIImage *)logoImage withLogoSize:(CGSize)logoSize;
-
++ (UIImage*)createQRWithString:(NSString*)qrString withSize:(CGSize)qrSize withQRColor:(UIColor*)qrColor withBgColor:(UIColor*)bgColor withLogoImage:(UIImage *)logoImage withLogoSize:(CGSize)logoSize;
+/** 生成条形码 */
++ (UIImage *)createGenerator:(NSString *)generatorString withSize:(CGSize)generatorgSize;
+/** 生成条形码 背景色及条形码颜色*/
++ (UIImage *)createGenerator:(NSString *)generatorString withSize:(CGSize)generatorgSize withColor:(UIColor*)color withBgColor:(UIColor*)bgColor;
 /** 生成圆角图片 */
 + (UIImage *)roundedCornerImageWithImage:(UIImage*)image withCornerRadius:(CGFloat)cornerRadius withBoderWidth:(CGFloat)boderWidth withBorderColor:(UIColor *)borderColor;
 

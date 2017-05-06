@@ -17,10 +17,12 @@
 
 - (void)changeBtnClick;
 
-- (void)showQRWithNormal;      // 展示正常的二维码
+- (void)showQRWithNormal;              // 展示正常的二维码
 - (void)showQRWithNormalwithLogo;      // 展示正常的二维码带logo
-- (void)showQRWithChangeColor; // 展示改变颜色的二维码
+- (void)showQRWithChangeColor;         // 展示改变颜色的二维码
 - (void)showQRWithChangeColorWithLogo; // 展示改变颜色的二维码带logo
+- (void)showGeneratorWithNormal;       // 展示正常的条形码
+- (void)showGeneratorWithChangeColor;  // 展示改变颜色的条形码
 
 @end
 // ====================================================================================================================================================================
@@ -75,6 +77,12 @@
     [alert addAction:[UIAlertAction actionWithTitle:@"改变颜色的二维码带logo" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
         [self showQRWithChangeColorWithLogo];
     }]];
+    [alert addAction:[UIAlertAction actionWithTitle:@"正常的条形码" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+        [self showGeneratorWithNormal];
+    }]];
+    [alert addAction:[UIAlertAction actionWithTitle:@"改变颜色的条形码" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+        [self showGeneratorWithChangeColor];
+    }]];
     [alert addAction:[UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
     }]];
     [self presentViewController:alert animated:YES completion:nil];
@@ -87,7 +95,7 @@
 }
 #pragma mark 展示改变颜色的二维码
 - (void)showQRWithChangeColor {
-    UIImage *qrImage = [LWQRTools createQRWithString:@"liwei---gitHub地址:https://github.com/xx52lw" withSize:self.qrImageView.frame.size withQRColor:[UIColor orangeColor] qrSizeQRBgColor:[UIColor blackColor]];
+    UIImage *qrImage = [LWQRTools createQRWithString:@"liwei---gitHub地址:https://github.com/xx52lw" withSize:self.qrImageView.frame.size withQRColor:[UIColor orangeColor] withBgColor:[UIColor blackColor]];
     self.qrImageView.image = qrImage;
 }
 #pragma mark 展示正常的二维码带logo
@@ -102,9 +110,20 @@
 - (void)showQRWithChangeColorWithLogo {
     UIImage *logo = [UIImage imageNamed:@"logo"];
     logo = [LWQRTools roundedCornerImageWithImage:logo withCornerRadius:20 withBoderWidth:10 withBorderColor:[UIColor redColor]];
-    UIImage *qrImage = [LWQRTools createQRWithString:@"liwei---gitHub地址:https://github.com/xx52lw" withSize:self.qrImageView.frame.size withQRColor:[UIColor orangeColor] qrSizeQRBgColor:[UIColor cyanColor] withLogoImage:logo withLogoSize:logo.size];
+    UIImage *qrImage = [LWQRTools createQRWithString:@"liwei---gitHub地址:https://github.com/xx52lw" withSize:self.qrImageView.frame.size withQRColor:[UIColor orangeColor] withBgColor:[UIColor cyanColor] withLogoImage:logo withLogoSize:logo.size];
     self.qrImageView.image = qrImage;
 
 }
+#pragma mark 展示正常的条形码
+- (void)showGeneratorWithNormal {
+    UIImage *qrImage = [LWQRTools createGenerator:@"123457890" withSize:self.qrImageView.frame.size];
+    self.qrImageView.image = qrImage;
+}
+#pragma mark 展示改变颜色的条形码
+- (void)showGeneratorWithChangeColor {
+    UIImage *qrImage = [LWQRTools createGenerator:@"123457890" withSize:self.qrImageView.frame.size withColor:[UIColor redColor] withBgColor:[UIColor orangeColor]];
+    self.qrImageView.image = qrImage;
+}
+
 @end
 // ====================================================================================================================================================================
